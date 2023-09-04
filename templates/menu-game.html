@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        
+        
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <!-- menu game -->
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link href="/assets/css/styles-sidebar.css" rel="stylesheet">            
+        <link href="/assets/css/stylescardloai.css" rel="stylesheet">
+
+        <!-- menu order -->
+        <link rel="stylesheet" href="/assets/css/style_order.css">
+
+        <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/assets/guru_theme/assets/icon/themify-icons/themify-icons.css">
+        <!-- <link rel="stylesheet" type="text/css" href="/assets/guru_theme/assets/css/bootstrap/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="/assets/guru_theme/assets/pages/notification/notification.css">
+        
+        <title>MenuGame KLMenu</title>
+    </head>
+    <body>
+        <!-- border RGB -->
+        <div id="progressbar_top"></div>
+        <div id="progressbar_bottom"></div>
+        <div id="progressbar_left"></div>
+        <div id="progressbar_right"></div>
+
+        <!-- Slider Bar -->
+        <div class="l-navbar expander" id="navbar">            
+            <nav class="nav">
+                <img class='hinh-kl1' src="images_order/logo.png"></img>
+                <div>
+                    <div class="nav__brand">
+                        <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                        <a href="#" class="nav__logo">CyberGame Thiên Thần</a>
+                    </div>
+                    
+                    <div class="nav__list">
+                        
+                        <div class="nav__link collapse active">
+                            <ion-icon name="fast-food-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">MENU DỊCH VỤ</span>
+                            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+                            <ul class="collapse__menu">
+
+                                <div class="Danhmuc_douong">
+                                    <a href="#" class="nav__link" style=" padding-bottom: 0; margin-bottom: 0;" onclick="sumitt('order')">
+                                        <i class="ti-angle-right"></i>
+                                        <span class="nav__name">Đồ Ăn</span>
+                                    </a>
+                                    <div class="order_danhmuc">
+                                        <li href="#" class="collapse__sublink" style="padding-left: 40px;" onclick= "sumitt('gameall')">.ALL_GAMES</li>
+                                        <li href="#" class="collapse__sublink" style="padding-left: 40px;" onclick="sumitt('gameonline')">.GAMES_ONLINE</li>
+                                        <li href="#" class="collapse__sublink" style="padding-left: 40px;" onclick="sumitt('gameoffline')">.GAMES_OFFLINE</li>
+                                    </div>
+                                </div>
+
+                                <div class="Danhmuc_doan">
+                                    <a href="#" class="nav__link" style=" padding-bottom: 0; margin-bottom: 0;" onclick="sumitt('order')">
+                                        <i class="ti-angle-right"></i>
+                                        <span class="nav__name">Đồ Uống</span>
+                                    </a>
+                                    <div class="order_danhmuc">
+                                        <li href="#" class="collapse__sublink" style="padding-left: 40px;" onclick= "sumitt('gameall')">.ALL_GAMES</li>
+                                        <li href="#" class="collapse__sublink" style="padding-left: 40px;" onclick="sumitt('gameonline')">.GAMES_ONLINE</li>
+                                        <li href="#" class="collapse__sublink" style="padding-left: 40px;" onclick="sumitt('gameoffline')">.GAMES_OFFLINE</li>
+                                    </div>
+                                </div>
+
+                            </ul>
+                        </div>
+
+                        <div class="nav__link collapse">
+                            <ion-icon name="game-controller-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">MENU GAME</span>
+                            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+                            <ul class="collapse__menu">
+                                <a href="#" class="collapse__sublink" onclick= "sumitt('gameall')">.ALL_GAMES</a>
+                                <a href="#" class="collapse__sublink" onclick="sumitt('gameonline')">.GAMES_ONLINE</a>
+                                <a href="#" class="collapse__sublink" onclick="sumitt('gameoffline')">.GAMES_OFFLINE</a>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav__link collapse">
+                            <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">TOOLS & OFFICE</span>
+                            <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+                            <ul class="collapse__menu">
+                                <a href="#" class="collapse__sublink">.TOOLS_GAME</a>
+                                <a href="#" class="collapse__sublink" onclick="sumitt('office')">.OFFICE</a>
+                                <a href="#" class="collapse__sublink" onclick="sumitt('changeline')">.CHANGE_LINE_INTERNET</a>
+                            </ul>
+                        </div>
+                        
+                        <a href="#" class="nav__link" onclick="sumitt('gopy')">
+                            <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                            <span class="nav__name">GÓP Ý & YÊU CẦU</span>
+                        </a>
+                    </div>
+                </div>
+				<div class="ADSdensang" id="densang"><span class='densang'>KHUYẾN MÃI 100%</span></div>
+				<div class="contentdensang" id="densang"><span class='densang'>Thứ 3-1.6.2021 Áp dụng tất cả hội viên</span></div>
+				<div><br></div><div class='slider' id="slider"></div>
+				<div><h6></h6></div>
+				<form method="post" style="text-align: center; padding: 8px;font-size: 10px; border-radius: 5px;" id="searchgame">
+                    <!-- <input type="Text" name="num" placeholder="Search Games" style="border-radius: 5px; width: 250px;" id="searchtext"/> -->
+                    <div class="text-field">
+                        <input type="Text" name="num" id="searchtext" required>
+                        <label>Search Games</label>
+                    </div>
+                </form>
+                <div class="version"><h>KLteam2022 Version 1.0</h></div>
+            </nav>
+        </div>
+
+        <!-- Content -->
+        <div class="main body-pd" id="containmenu">
+            <div class="header-logo">
+                <img class='hinh body-pd' src="images_order/1.jpg" id="banner"></img>
+                <!-- src="images_order/images-banner.jpg" -->
+                <h2 class='neon' id='tenmay'>M-001</h2>
+                <h3 class="dashboard-title">Recommand Food for you</h3>
+                <!-- <div class="dashboard-menu">
+                    <a href="#">All</a>
+                    <a href="#">Promotion</a>
+                    <a href="#">Top Rated</a>
+                    <a href="#">Favorites</a>
+                    <a href="#">Best Seller</a>
+                    <a href="#">Near Me</a>
+                </div> -->
+            </div>
+
+           <div id="noidung">
+
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td>
+                    <div style="width:100%; height:265px;">
+                        <table cellspacing="0" cellpadding="0" border="0" width=100% >
+                        <tr>
+                            <td>new item</td>
+                            <td>new item</td>
+                        </tr>
+                        </table>  
+                    </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <div class="menuitem" style="width:100%; height:calc(100vh - 320px);overflow:auto; ">
+                           <table cellspacing="0" cellpadding="0" border="0" width=100% align="center">
+                             <tr style="background-color:transparent; text-align:center;vertical-align: middle;">
+                                <td class="show_content" style="padding-right: 310px;">
+                                    
+                                    <!-- <div class="dashboard-content">
+                                        <div class="dashboard-card" onclick="order(this)">
+                                            <img class="card-image" src="images_order/images1.jpg">
+                                            <div class="card-detail">
+                                                <h4 class="card-name">Amazing Pizza</h4>
+                                                <h4><span class="card-price"> 30.000đ</span></h4>
+                                                <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                                            </div>
+                                        </div>
+                
+                                        <div class="dashboard-card" onclick="order(this)">
+                                            <img class="card-image" src="images_order/images2.jpg">
+                                            <div class="card-detail">
+                                                <h4 class="card-name">Humbeger</h4>
+                                                <h4><span class="card-price"> 50.000đ</span></h4>
+                                                
+                                                <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                                            </div>
+                                        </div>
+                
+                                        <div class="dashboard-card" onclick="order(this)">
+                                            <img class="card-image" src="images_order/images3.jpg">
+                                            <div class="card-detail">
+                                                <h4 class="card-name">Bò bit tết</h4>
+                                                <h4><span class="card-price"> 30.000đ</span></h4>
+                                                
+                                                <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                                            </div>
+                                        </div>
+                
+                                        <div class="dashboard-card" onclick="order(this)">
+                                            <img class="card-image" src="images_order/images2.jpg">
+                                            <div class="card-detail">
+                                                <h4 class="card-name">Humbeger 2</h4>
+                                                <h4><span class="card-price"> 50.000đ</span></h4>
+                                                
+                                                <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dashboard-card" onclick="order(this)">
+                                            <img class="card-image" src="images_order/images2.jpg">
+                                            <div class="card-detail">
+                                                <h4 class="card-name">Humbeger 3</h4>
+                                                <h4><span class="card-price"> 50.000đ</span></h4>
+                                                
+                                                <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- <div class="box">
+                                        <div class="box-img">
+                                            <img src="https://image.thanhnien.vn/w2048/Uploaded/2022/dbeyxqxqrs/2022_07_15/1-4624.jpg" onerror="this.src='https://i.imgur.com/NhGzwjO.gif';this.onerror='';"/>
+                                        </div>
+                                        <div class="tengame">
+                                            <span>Game Online</span>
+                                            <h3 class="name">FIFA ONLINE</h3>
+                                            <h3 class="theloai">Hành động, Phiêu lưu</h3>
+                                            <h3 class="luotchoi">☆ 1</h3>
+                                        </div>
+                                        <div class="content">
+                                            <h3>FIFA ONLINE</h3>
+                                            <p>Hành động, Phiêu lưu</p>
+                                        </div>
+                                        <div class="button" >
+                                            <li><button class="b1" onclick="call('filerun4')">Play Game</button></li>
+                                            <li><button class="b1" onclick="call('openfolder4')" )="">Open Folder</button></li>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="box">
+                                    <div class="box-img">
+                                    <img src="https://img.zing.vn/upload/vnggames2/source/Game/2022/Dau%20La/Nguy%C3%AAn-B%E1%BA%A3n-%C4%90%E1%BA%A1i-L%E1%BB%A5c-V%C3%B5-H%E1%BB%93n-3D-1000x490.jpg" onerror="this.src='https://i.imgur.com/NhGzwjO.gif';this.onerror='';">
+                                    </div>
+                                    <div class="tengame_off">
+                                    <span>Game Offline</span>
+                                    <h3 class="name">FIFA ONLINE</h3>
+                                    <h3 class="theloai">Hành động, Phiêu lưu</h3>
+                                    <h3 class="luotchoi">☆ 1</h3>
+                                    </div>
+                                    <div class="content">
+                                    <h3>FIFA ONLINE</h3>
+                                    <p>Hành động, Phiêu lưu</p>
+                                    </div>
+                                    <div class="button">
+                                    <li><button class="b1" onclick="call('filerun4')">Play Game</button></li>
+                                    <li><button class="b1" onclick="call('openfolder4')" )="">Open Folder</button></li>
+                                    </div>
+                                    </div> -->
+                                    
+                                    <!-- <div class="container" id="cardinternet">
+                                        <label class="option_item">
+                                            <input id="checkbox0" type="checkbox" class="checkbox" onclick="openPopup('checkbox0', '192.168.1.1','192.168.1.1','8.8.8.8')">
+                                            <div class="option_inner facebook">
+                                                <div class="tickmark"></div>
+                                                <div class="boxchangeline">
+                                                    <div class="icon">Viettel</div>
+                                                    <div class="contentchangline facebook">
+                                                        <h3>Speed: 100Mbps</h3>
+                                                        <p>Gateway: 192.168.1.1</p>
+                                                        <p>DNS1: 192.168.1.1</p>
+                                                        <p>DNS2: 8.8.8.8</p>
+                                                        <h3>Fast internet for Game</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <label class="option_item">
+                                            <input id="checkbox1" type="checkbox" class="checkbox" onclick="openPopup('checkbox1', '192.168.1.2','1.1.1.1','8.8.8.8')">
+                                            <div class="option_inner facebook">
+                                                <div class="tickmark"></div>
+                                                <div class="boxchangeline">
+                                                    <div class="icon">VNPT</div>
+                                                    <div class="contentchangline facebook">
+                                                        <h3>Speed: 100Mbps</h3>
+                                                        <p>Gateway: 192.168.1.2</p>
+                                                        <p>DNS1: 1.1.1.1</p>
+                                                        <p>DNS2: 8.8.8.8</p>
+                                                        <h3>Fast internet for Web</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div> -->
+                                    
+                                    
+
+                                </td>
+                             </tr>
+                           </table>
+                        </div>
+                    </td>
+                </tr>
+           </table>
+           
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-menu" onclick="giohang()">
+                        <input type="checkbox" id="cart">
+                        <label for="cart" class="label-cart"><span class="fas fa-shopping-cart"><p class="tick"></p></span></label>
+                        <br><a>Giỏ Hàng</a>
+                    </div>
+                    <div class="sidebar-menu" onclick="thongbao()">
+                        <span class="fas fa-bell"><p class="tick"></p></span>
+                        <br><a href="#">Thông Báo</a>
+                        
+                    </div>
+                    <div class="sidebar-menu">
+                        <span class="fas fa-comments"></span>
+                        <br><a href="#">Chat</a>
+                    </div>
+                    <!-- <div class="sidebar-menu">
+                        <span class="fas fa-heart"></span>
+                        <a href="#">Favaris</a>
+                    </div> -->
+                    <div class="sidebar-menu">
+                        <span class="fas fa-user"></span>
+                        <br><a href="#">Profile</a>
+                    </div>
+                    <!-- <div class="sidebar-menu">
+                        <span class="fas fa-sliders-h"></span>
+                        <a href="#">Setting</a>
+                    </div> -->
+                </div>
+
+            </div>            
+        </div>
+        
+        <!----------------------- element order dashboard order ----------------->
+        <div class="dashboard-order">
+            <h3>Giỏ Hàng <span class="countcart">(Đang trống! )</span></h3>
+           <hr class="divider">
+            
+            <!-- element order -->
+            <div class="order-wrapper">
+                
+            </div>
+            
+            <!-- <hr class="divider"> -->
+            <div class="order-total">
+                <div class="order-promo">
+                    <input class="input-promo" type="text" placeholder="Apply Voucher">
+                    <button class="button-promo">Find Promo</button>
+                </div> 
+                <!-- <hr class="divider"> -->
+                <p>Thành Tiền: <span id="order-totals">70đ</span></p>
+                <button class="checkout" onclick="dathang()">Đặt Hàng</button>
+            </div>
+
+        </div>
+        
+        <!----------------------- element thong bao ------------------->
+        <div class="dashboard-thongbao">
+        <h3>Thông Báo <span class="countcart"></span></h3>
+        <hr class="divider">
+        <div class="thongbao-wrapper">
+            <div class="thongbao-card">
+                <!-- <p>[Hệ Thống] Đặt hàng <b style='color: #00b627;'> thành công!</b></p>
+                <p style="color: var(--black2); font-size: 13px;">12:05:12, 12/02/2022</p>
+                <hr class="divider"> -->
+            </div>
+        </div>
+        <hr class="divider" style="position: absolute;bottom: 0px;">
+        </div>
+         
+
+        <!-------------- element loading poup ------------------------->
+        <div class="overlay"></div>
+        <div class="poup">
+            <p class="poup_thongbao">[Hệ Thống] Đặt hàng Mì xào rau, Mì xào Rau + Trứng ốp la thành công!</p>
+            <div class="progress-bar" style= "--width: 100" data-label=""></div>
+        </div>
+
+        <!------------------ element popup input ------------------>
+        <div  class="containerpopup">
+            <div class="popup" id="popup" tabindex="-1" role="dialog" aria-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
+                <img src="image/tick.png">
+                <a href="#" class="close_popup" onclick='closePopup_gop_y()'>X</a>
+                <p class="title">Cập nhật game/phần mềm</p>
+                <hr style="margin: .3rem 0rem 0rem 0rem; border: 1px solid rgba(0, 0, 0, 0.3);"><br>
+                <!-- <input type="text" required="" placeholder="Bạn có muốn đóng góp thêm ý kiến khác?" class="popup-input"> -->
+                <!-- <textarea name="Text1" cols="40" rows="5" placeholder="Bạn có muốn đóng góp thêm ý kiến khác?" class="popup-input"></textarea> -->
+                <div class="text-field">
+                    <textarea name="Text1" cols="40" rows="5" class="popup-input" required></textarea>
+                    <label>Bạn có muốn đóng góp thêm ý kiến khác?</label>
+                </div>
+                <p style="color: #505050; text-align: left; margin-top: 5px;">Tối đa 200 ký tự</p>
+                <!-- <h2>Thank You!</h2> -->
+                <!-- <p>Your details has been successfully submitted. Thanks!</p> -->
+                <button type="button" onclick="closePopup(this)">Gửi</button>
+            </div>
+        </div> 
+
+
+        <!-- js axios phải nằm trên hàm chính nhé hixhix -->
+        <script src="/assets/js/axios.min.js"></script>
+        <!-- <script src="scripts_order.js"></script> -->
+        <script src="/assets/js/menu-game.js"></script>
+        
+    </body>
+  
+</html>

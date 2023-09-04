@@ -1,0 +1,180 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  --nav-width: 45px;
+
+  /*===== Colores =====*/
+  --first-color: #0C5DF4;
+  --bg-color: #12192C;
+  --sub-color: #B6CEFC;
+  --white-color: #FFF;
+  
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+h1{
+  margin: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+
+}
+
+/*===== l NAV =====*/
+.l-navbar{
+  position: fixed;
+  top: -200px;
+  left: 0;
+  width: var(--nav-width);
+  height: 125vh;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  padding: 0rem 0.2rem 0rem;
+  transition: .5s;
+  margin: 0;
+  z-index: var(--z-fixed);
+}
+
+/*===== NAV =====*/
+.nav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.nav__brand{
+  display: flex;
+  /* grid-template-columns: max-content max-content; */
+  /*justify-content: space-between;*/
+  align-items: center;
+  margin-bottom: .5rem;
+  border-radius: .5rem;
+  /* text-align: justify; */
+  text-align: center;
+  cursor: pointer;
+}
+.nav__brand:hover {
+  background-color: var(--first-color);
+}
+
+
+.nav__toggle{
+  font-size: 1.55rem;
+  padding: .3rem;
+  /*padding-left: .15rem;*/
+  cursor: pointer;
+   color: rgba(255, 255, 255, 0.2);
+}
+.nav__logo{
+  /* color: var(--white-color); */
+  /* position: absolute; */
+  /* width: 10rem; */
+  /* font-weight: 900; */
+  font-size: 1.25rem;
+  /* padding-left: 5px; */
+  color: #23e629;
+  /* left: 50%; */
+  /* transform: translate(0,-50%); */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__link{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: .75rem;
+  padding: .5rem;
+  color: var(--white-color);
+  border-radius: .5rem;
+  margin-bottom: .5rem;
+  transition: .3s;
+  cursor: pointer;
+}
+.nav__link:hover{
+  background-color: var(--first-color);
+}
+.nav__icon{
+   color: #23e629;
+  font-size: 1.25rem;
+}
+
+.nav__toggle{
+  color: #ffffff;
+}
+
+
+.nav__name{
+  font-size: var(--normal-font-size);
+}
+
+/*Expander menu + 9.25rem*/
+.expander{
+  top: 0;
+  height: 100vh;
+  width: calc(var(--nav-width) + 14rem);
+}
+
+/*Add padding body*/
+.body-pd{
+  padding-left: 14rem;
+}
+
+/*Active links menu*/
+.active{
+  background-color: var(--first-color);
+}
+
+/*===== COLLAPSE =====*/
+.collapse{
+  grid-template-columns: 20px max-content 1fr;
+}
+.collapse__link{
+  justify-self: flex-end;
+  transition: .5s;
+}
+.collapse__menu{
+  display: none;
+  padding: .75rem 2.25rem;
+}
+.collapse__sublink{
+  color: var(--sub-color);
+  font-size: var(--small-font-size);
+}
+.collapse__sublink:hover{
+  color: var(--white-color);
+}
+
+/*Show collapse*/
+.showCollapse{
+  display: block;
+}
+
+/*Rotate icon*/
+.rotate{
+  transform: rotate(180deg);
+}
+
+.nav .version {
+  text-align: center; padding: 8px;font-size: 10px;
+}

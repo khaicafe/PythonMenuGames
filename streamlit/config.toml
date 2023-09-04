@@ -1,0 +1,6 @@
+[global]
+developmentMode = false
+[server]
+port = 8000
+[general]
+nemail = "a@a.a"

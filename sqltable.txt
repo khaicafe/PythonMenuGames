@@ -1,0 +1,105 @@
+trigger
+/*-------------------------------*/
+DROP TRIGGER "main"."remove_nguyenlieuMH";
+CREATE TRIGGER remove_nguyenlieuMH AFTER DELETE ON MatHang
+BEGIN
+  DELETE FROM NguyenLieuMH
+  WHERE NguyenLieuMH.MatHang_ID= OLD.id;
+END
+/*-------------------------------*/
+
+DROP TRIGGER "main"."remove_nguyenlieuNL";
+CREATE TRIGGER remove_nguyenlieuNL AFTER DELETE ON NguyenLieu
+BEGIN
+  DELETE FROM NguyenLieuMH
+  WHERE NguyenLieuMH.NguyenLieu_ID = OLD.id;
+END
+/*-------------------------------*/
+
+DROP TRIGGER "main"."ListorderTopping_insert";
+CREATE TRIGGER ListorderTopping_insert AFTER INSERT ON ListorderTopping
+
+BEGIN
+
+UPDATE ListorderTopping SET Total = SL* (SELECT price FROM MatHang WHERE MatHang.name = NameTopping) WHERE id_list_order = NEW.id_list_order;
+
+UPDATE ListorderTopping SET id_MatHang = (SELECT id FROM MatHang WHERE name = ListorderTopping.NameTopping) WHERE id_list_order = NEW.id_list_order;
+
+UPDATE Listorder SET Total_topping = coalesce((SELECT SUM(Total) FROM ListorderTopping WHERE id_list_order = NEW.id_list_order GROUP BY ListorderTopping.id_list_order),0) WHERE Listorder.Id = NEW.id_list_order;
+
+UPDATE Listorder SET ThanhToan = SL*(Price + Total_topping) WHERE Listorder.Id = NEW.id_list_order;
+
+INSERT INTO Listorder_NL ( id_Listorder, Date, Danhmuc, Name, id_MatHang, id_NL, nameNL,SL_NL_dadung) 
+SELECT ListorderTopping.id_list_order, ListorderTopping.Date, 'Topping', ListorderTopping.NameTopping, ListorderTopping.id_MatHang, NguyenLieuMH.NguyenLieu_ID, NguyenLieuMH.nameNL, ListorderTopping.SL*NguyenLieuMH.Soluong
+FROM ListorderTopping INNER JOIN NguyenLieuMH ON NguyenLieuMH.MatHang_ID = ListorderTopping.id_MatHang
+WHERE ListorderTopping.id_list_order= NEW.id_list_order;
+
+END
+/*-------------------------------*/
+DROP TRIGGER "main"."Listorder_insert";
+CREATE TRIGGER Listorder_insert AFTER INSERT ON Listorder
+
+BEGIN
+
+UPDATE Listorder SET id_MatHang = (SELECT id FROM MatHang WHERE name = Listorder.Name) WHERE Listorder.Id = NEW.id;
+
+INSERT INTO Listorder_NL ( id_Listorder, Date, Danhmuc, Name, id_MatHang, id_NL, nameNL,SL_NL_dadung) 
+SELECT Listorder.Id , Listorder.Date, Listorder.Danhmuc, Listorder.Name, Listorder.id_MatHang, NguyenLieuMH.NguyenLieu_ID, NguyenLieuMH.nameNL, Listorder.SL*NguyenLieuMH.Soluong
+FROM Listorder INNER JOIN NguyenLieuMH ON NguyenLieuMH.MatHang_ID = Listorder.id_MatHang
+WHERE Listorder.Id= NEW.id;
+
+END
+
+/*-------------------------------*/
+DROP TRIGGER "main"."Listorder_update";
+CREATE TRIGGER Listorder_update AFTER UPDATE ON Listorder
+
+BEGIN
+
+UPDATE Ca_Staff SET DT_dichvu = (SELECT SUM(ThanhToan) FROM Listorder WHERE id_ca = NEW.id_ca AND "Action"="HOÀN THÀNH" GROUP BY id_ca) WHERE id_ca = NEW.id_ca;
+
+END
+/*-------------------------------*/
+DROP TRIGGER "main"."remove_list_order_topping";
+CREATE TRIGGER remove_list_order_topping AFTER DELETE ON Listorder
+BEGIN
+  DELETE FROM ListorderTopping
+  WHERE ListorderTopping.id_list_order = OLD.id;
+END
+/*-------------------------------*/
+DROP TRIGGER "main"."remove_nguyenlieuMH";
+CREATE TRIGGER remove_nguyenlieuMH AFTER DELETE ON MatHang
+BEGIN
+  DELETE FROM NguyenLieuMH
+  WHERE NguyenLieuMH.MatHang_ID= OLD.id;
+END
+/*-------------------------------*/
+DROP TRIGGER "main"."remove_toppingMH";
+CREATE TRIGGER remove_toppingMH AFTER DELETE ON MatHang
+BEGIN
+  DELETE FROM ToppingMH
+  WHERE ToppingMH.MatHang_ID= OLD.id;
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

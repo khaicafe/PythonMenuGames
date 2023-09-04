@@ -1,0 +1,51 @@
+Dear Trịnh Minh Khải,
+
+Thank you for purchasing PyArmor, this registration code is authorized to you
+
+lDnxeL6LXHHm5IP3WQdqiMzSKUFob1PuA8YnKC15c8SijHzC87-k4on2lWbOuz208mVLE2KcCfA_muy92381Y7vBy6cnzJQYYdNR3dW4nh1xkOCjaYagQzaprQ0dBMoV-GBSJpg69XfQ6RGlktmrK6tVigiDltQ-PHqN5Ta5Se1Lpgt7GaIb49LnNyqjYXC2
+
+There are 2 ways to register PyArmor
+
+1. Download the attachment of this email, save it as "pyarmor-regcode-2911.txt", run the following command to register PyArmor directly (only for PyArmor 6.5.2+)
+
+    pyarmor register pyarmor-regcode-2911.txt
+
+2. Open the following url in any web browser to activate this registration code at first, waiting for a while, a reg-file generally named "pyarmor-regfile-2911.zip" will be downloaded
+
+    https://api.dashingsoft.com/product/key/activate/lDnxeL6LXHHm5IP3WQdqiMzSKUFob1PuA8YnKC15c8SijHzC87-k4on2lWbOuz208mVLE2KcCfA_muy92381Y7vBy6cnzJQYYdNR3dW4nh1xkOCjaYagQzaprQ0dBMoV-GBSJpg69XfQ6RGlktmrK6tVigiDltQ-PHqN5Ta5Se1Lpgt7GaIb49LnNyqjYXC2/
+
+   Then register PyArmor by this file
+
+    pyarmor register /path/to/pyarmor-regfile-2911.zip
+
+Check the registration information:
+
+    pyarmor register
+
+After registration successfully, remove all the obfuscated scripts by trial
+version, then obfuscate them again.
+
+PyArmor is well document, here is the latest documentation
+
+    https://pyarmor.readthedocs.io/
+
+Here is EULA of PyArmor and technical support items
+
+    https://pyarmor.readthedocs.io/en/latest/license.html
+
+If there is any question, first check these questions and solutions
+
+    https://pyarmor.readthedocs.io/en/latest/questions.html
+
+It may help you solve the problem quickly, if there is no solution
+
+For business and security issue send email to "pyarmor@163.com"
+
+For technical issue, report an issue here
+
+    https://github.com/dashingsoft/pyarmor/issues
+
+Regards
+Jondy Zhao
+Dashingsoft Founder
+

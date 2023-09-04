@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+.pop_up_container {
+	visibility: hidden;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    inset: 0;
+    display: grid;
+	z-index: 9999;
+    place-items: center;
+    animation: show_popup 500ms ease-in-out forwards;
+}
+
+.pop_up {
+    /* width: clamp(300px, 90vw, 500px); */
+    /* background-color: #0e0e0e; */
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    color: #fff;
+}
+
+@keyframes show_popup {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+#popup {
+    display: none;
+}
+/* the source code in the description... */
+/* and fix my mistake */
+
+.centerloading{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.ring {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	animation: ring 2s linear infinite;
+}
+@keyframes ring {
+	0%{
+	transform: rotate(0deg);
+	box-shadow: 1px 5px 2px #e65c00;
+}
+50%{
+	transform: rotate(180deg);
+	box-shadow: 1px 5px 2px #18b201;
+}
+100%{
+	transform: rotate(360deg);
+	box-shadow: 1px 5px 2px #0456c8;
+}
+}
+.ring:before{
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 5px rgba(255,255,255,.3);
+}
+#spanloading{
+	color: yellow;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 200px;
+	animation: text 3s linear infinite;
+}
+@keyframes text {
+	80%{
+	color: black;
+	
+}
+}

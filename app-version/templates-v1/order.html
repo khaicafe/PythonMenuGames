@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_order.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <!-- header -->
+        <!-- <input type="checkbox" id="cart">
+        <label for="cart" class="label-cart"><span class="fas fa-shopping-cart"></span></label> -->
+        <!-- <h3 class="logo">Food Delivery Services</h3> -->
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <input type="checkbox" id="cart">
+                <label for="cart" class="label-cart"><span class="fas fa-shopping-cart"><p class="tick">.</p></span></label>
+                <br><a>Giỏ Hàng</a>
+            </div>
+            <div class="sidebar-menu">
+                <span class="fas fa-bell"><p class="tick">.</p></span>
+                <br><a href="#">Thông Báo</a>
+                
+            </div>
+            <div class="sidebar-menu">
+                <span class="fas fa-comments"></span>
+                <br><a href="#">Chat</a>
+            </div>
+            <!-- <div class="sidebar-menu">
+                <span class="fas fa-heart"></span>
+                <a href="#">Favaris</a>
+            </div> -->
+            <div class="sidebar-menu">
+                <span class="fas fa-user"></span>
+                <br><a href="#">Profile</a>
+            </div>
+            <!-- <div class="sidebar-menu">
+                <span class="fas fa-sliders-h"></span>
+                <a href="#">Setting</a>
+            </div> -->
+        </div>
+        
+        <!-- main dashboard -->
+        <div class="dashboard">
+            <div class="dashboard-banner">
+                <img src="images_order/images-banner.jpg">
+                <div class="banner-promo">
+                    <h1><span>50% OFF</span>
+                    Tasty food <br> On Your Hand</h1>
+                </div>
+            </div>
+            <h3 class="dashboard-title">Recommand Food for you</h3>
+            <div class="dashboard-menu">
+                <a href="#">All</a>
+                <a href="#">Promotion</a>
+                <a href="#">Top Rated</a>
+                <a href="#">Favorites</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Near Me</a>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="dashboard-card" onclick="order(this)">
+                    <img class="card-image" src="images_order/images1.jpg">
+                    <div class="card-detail">
+                        <h4 class="card-name">Amazing Pizza</h4>
+                        <h4><span class="card-price"> 30.000đ</span></h4>
+                        <!-- <p>Lorem ipsum dolor rem qui dolor.</p> -->
+                        <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card" onclick="order(this)">
+                    <img class="card-image" src="images_order/images2.jpg">
+                    <div class="card-detail">
+                        <h4 class="card-name">Humbeger</h4>
+                        <h4><span class="card-price"> 50.000đ</span></h4>
+                        <!-- <p>Lorem ipsum dolor rem qui dolor.</p> -->
+                        <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card" onclick="order(this)">
+                    <img class="card-image" src="images_order/images3.jpg">
+                    <div class="card-detail">
+                        <h4 class="card-name">Bò bit tết</h4>
+                        <h4><span class="card-price"> 30.000đ</span></h4>
+                        <!-- <p>Lorem ipsum dolor rem qui dolor.</p> -->
+                        <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card" onclick="order(this)">
+                    <img class="card-image" src="images_order/images2.jpg">
+                    <div class="card-detail">
+                        <h4 class="card-name">Humbeger 2</h4>
+                        <h4><span class="card-price"> 50.000đ</span></h4>
+                        <!-- <p>Lorem ipsum dolor rem qui dolor.</p> -->
+                        <p class="card-time"><span class="fas fa-clock"></span>15-30 mins</p>
+                    </div>
+                </div>
+
+            </div>        
+        </div>
+        
+        <!-- order dashboard -->
+        <div class="dashboard-order">
+            <h3>Giỏ Hàng</h3>
+            <!-- <div class="order-address">
+                <p>Address Delivery</p>
+                <h4>221 B Baker Street, London</h4>
+            </div>
+            <div class="order-time">
+                <span class="fas fa-clock"></span> 30 min <span class="fas fa-map-marker-alt"></span> 2 km
+            </div> -->
+            
+            <div class="order-wrapper">
+                <hr class="divider">
+                <div class="order-card">
+                    <img class="order-image" src="images_order/images1.jpg">
+                    <div class="order-detail">
+                        <p>Amazing Pizza</p>
+                        <span class="order-price">30.000đ </span><i class="fas fa-times"></i> <span class="order-price"> 1</span>
+                        <input class="input-order" type="text" placeholder="Ghi Chú">
+                    </div>
+                    <!-- <h4 class="order-price"> 30đ</h4> -->
+                    
+                </div>
+                <hr class="divider">
+
+                <div class="order-card">
+                    <img class="order-image" src="images_order/images2.jpg">
+                    <div class="order-detail">
+                        <p>Amazing Pizza</p>
+                        <span class="order-price">30.000đ </span><i class="fas fa-times"></i> <span class="order-price"> 1</span>
+                        <input class="input-order" type="text" placeholder="Ghi Chú">
+                    </div>
+                    <!-- <h4 class="order-price"> 30đ</h4> -->
+                    
+                </div>
+                <hr class="divider">
+
+                <div class="order-card">
+                    <img class="order-image" src="images_order/images3.jpg">
+                    <div class="order-detail">
+                        <p>Amazing Pizza</p>
+                        <span class="order-price">30.000đ </span><i class="fas fa-times"></i> <span class="order-price"> 1</span>
+                        <input class="input-order" type="text" placeholder="Ghi Chú">
+                    </div>
+                    <!-- <h4 class="order-price"> 30đ</h4> -->
+                    
+                </div>
+                <hr class="divider">
+
+                <div class="order-card">
+                    <img class="order-image" src="images_order/images1.jpg">
+                    <div class="order-detail">
+                        <p>Amazing Pizza</p>
+                        <span class="order-price">30.000đ </span><i class="fas fa-times"></i> <span class="order-price"> 1</span>
+                        <input class="input-order" type="text" placeholder="Ghi Chú">
+                    </div>
+                    <!-- <h4 class="order-price"> 30đ</h4> -->
+                    
+                </div>
+                <hr class="divider">
+
+                <div class="order-card">
+                    <img class="order-image" src="images_order/images2.jpg">
+                    <div class="order-detail">
+                        <p>Amazing Pizza</p>
+                        <span class="order-price">30.000đ </span><i class="fas fa-times"></i> <span class="order-price"> 1</span>
+                        <input class="input-order" type="text" placeholder="Ghi Chú">
+                    </div>
+                    <!-- <h4 class="order-price"> 30đ</h4> -->
+                    
+                </div>
+                <hr class="divider">
+
+                <div class="order-card">
+                    <img class="order-image" src="images_order/images3.jpg">
+                    <div class="order-detail">
+                        <p>Amazing Pizza</p>
+                        <span class="order-price">30.000đ </span><i class="fas fa-times"></i> <span class="order-price"> 1</span>
+                        <input class="input-order" type="text" placeholder="Ghi Chú">
+                    </div>
+                    <!-- <h4 class="order-price"> 30đ</h4> -->
+                    
+                </div>
+                <hr class="divider">
+
+                
+            
+            </div>
+            
+            <!-- <hr class="divider"> -->
+            <div class="order-total">
+                <!-- <p>Subtotal <span>156đ</span></p>
+                <p>Tax (10%) <span>15.5đ</span></p>
+                <p>Delivery Free<span>3đ</span></p>-->
+                <div class="order-promo">
+                    <input class="input-promo" type="text" placeholder="Apply Voucher">
+                    <button class="button-promo">Find Promo</button>
+                </div> 
+                <!-- <hr class="divider"> -->
+                <p>Thành Tiền: <span id="order-totals">70đ</span></p>
+                <button class="checkout" onclick="dathang()">Đặt Hàng</button>
+            </div>
+            <!-- <button class="checkout">Đặt Hàng</button> -->
+        </div>
+        <!-- <div class="sidebars"></div> -->
+
+        <!-------------- element loading poup ------------------------->
+        <div class="overlay"></div>
+        <div class="poup">
+            <p class="poup_thongbao">[Hệ Thống] Đặt hàng Mì xào rau, Mì xào Rau + Trứng ốp la thành công!</p>
+            <div class="progress-bar" style= "--width: 100" data-label=""></div>
+        </div>
+
+        <script src="scripts_order.js"></script>
+    </body>
+  
+</html>

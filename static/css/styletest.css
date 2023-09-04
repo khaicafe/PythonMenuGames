@@ -1,0 +1,591 @@
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+body {
+    background-color: #212125;
+    top: 0px;
+}
+.stApp {
+    background-color: #212125;
+    top: 0px;
+    padding: 0;
+
+}
+html, body, div, iframe,h1, h2, h4, h5, h6, hr{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        }
+
+div.box {
+    position: relative;
+    top: -20px;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    min-height: 150px;
+    margin: 20px 20px 0 0;
+
+    float: left;
+
+}
+.box {
+    position: relative;
+    top: 0px;
+    width: 150px;
+    padding: 0px;
+    perspective: 1000px;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+.box:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px 5px solid #000;
+}
+.box .box-img{
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .box-img{
+    transform: rotateY(-90deg);
+
+}
+.box .box-img img{
+    width: 150px;
+    height: 200px;
+    border:1.5px solid #000;
+    border-radius: 5px;
+}
+####################################################
+.box .tengame{
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box .tengame span{
+    position: absolute;
+    color: #fff;
+    background: #A21D0A;
+    font-size: 11px;
+    font-weight: bold;
+
+    float: left;
+    clear: both;
+    padding: 4px;
+    text-shadow: 1px 1px 1px #111;
+    left: 2px;
+    top: 2px;
+    border-top-left-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .tengame span {
+    color: transparent;
+    transform: rotateY(-88deg);
+
+}
+.box .tengame span:after {
+    content: "";
+
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -12px;
+    width: 0;
+    height: 24px;
+    white-space: nowrap;
+
+    border-color: transparent transparent transparent #A21D0A;
+    border-style: solid;
+    border-width: 11px 0 12px 12px;
+
+
+
+}
+####################################################
+.box .tengame_off{
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box .tengame_off span{
+    position: absolute;
+    color: #fff;
+    background: #0000ff;
+    font-size: 11px;
+    font-weight: bold;
+
+    float: left;
+    clear: both;
+    padding: 4px;
+    text-shadow: 1px 1px 2px #111;
+
+    left: 2px;
+    top: 2px;
+    border-top-left-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .tengame_off span {
+    color: transparent;
+    transform: rotateY(-88deg);
+
+}
+.box .tengame_off span:after {
+    content: "";
+
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -12px;
+    width: 0;
+    height: 24px;
+    white-space: nowrap;
+
+    border-color: transparent transparent transparent #0000ff;
+    border-style: solid;
+    border-width: 11px 0 12px 12px;
+
+
+
+}
+/*#########################################################################*/
+/*.box:hover .tengame h3{
+}*/
+.name {
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+    color: #ff8040;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0,0,0,.7);
+    padding: 5px 0px 10px 5px;
+    margin: 0px 0px 1px 0px;
+    top: 158px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .name {
+    transform: rotateY(-90deg);
+
+}
+
+.theloai {
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+    margin: 13px 3px 1px 0px;
+    /*top, phai, bottom, trai*/
+    font-size: 12px;
+    position: absolute;
+    padding: 5px;
+    top: 165px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .theloai {
+    transform: rotateY(-90deg);
+
+}
+.luotchoi {
+
+    /*display: block;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    width: 100%;
+    text-align: right;
+    align-items: right;
+    margin: 13px 0px 0px 0px;
+    bottom: 0;
+    top: 170px;
+    padding: 5px;
+
+    color: rgba(255,255,255,0.5);
+    font-size: 8px;
+    position: absolute;
+
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+
+}
+.box:hover .luotchoi {
+    color: transparent;
+    transform: rotateY(-90deg);
+
+}
+/*##############################################################################*/
+.box .content {
+    color: white;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .content{
+    transform: rotateY(0);
+
+
+}
+.box .content h3{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+
+}
+.box .content p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 0px 0px;
+    margin: 0 25px;
+}
+/*#######################################################################*/
+.box .button{
+    top: 120px;
+    left: 0;
+    width: 100%;
+
+    position: absolute;
+
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+
+
+
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .button{
+    transform: rotateY(0deg);
+
+}
+.box .button li{
+    list-style: none;
+    padding: 5px 0;
+}
+.box .button li button{
+    color: #15f4ee;
+    font-size: 15px;
+    text-decoration: none;
+    border:1px solid #15f4ee;
+    padding: 0px 3px;
+    background:#000;
+    border-radius: 6px;
+    cursor: pointer;
+
+
+}
+.box .button li button:hover{
+    box-shadow: 0 1px 15px 0 #15f4ee inset, 0 1px 15px 0 #15f4ee,
+                0 1px 15px 0 #15f4ee inset, 0 1px 15px 0 #15f4ee;
+    text-shadow: 0 1px 15px 0 #15f4ee, 0 1px 15px 0 #15f4ee;
+
+}
+.box .button li button:focus {
+     outline:none;
+  box-shadow: none;
+}
+
+/*############################ ADS ########################################*/
+
+div.header-logo {
+    width: 100%;
+    position: relative;
+    top: -30px;
+
+}
+div.header-logo .hinh{
+    width: 99%;
+    height: 250px;
+
+    filter: drop-shadow(0 0 20px blue);
+       /*position: relative;
+    object-position: 150px 0;
+    object-fit: contain;*/
+}
+img.hinh-kl{
+    position: fixed;
+    width: 19%;
+    height: 20%;
+    filter: drop-shadow(0 0 20px white);
+
+       /*position: relative;
+    background: #0f0;
+    object-position: 150px 0;
+    object-fit: contain;*/
+    top: 0;
+    left: 85%;
+    object-fit: fill;
+    float: right;
+    color: transparent;
+    animation: animate_ADS 5s linear infinite;
+    /*animation-delay: calc(0.1s * var(--i));*/
+
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+.neon {
+    position: absolute;
+    /*display: flex;*/
+    float: right;
+    font-family:'Arial Narrow', sans-serif;
+    font-size: 3em;
+    right: 0px;
+    text-align: right;
+    align-items: right;
+    color: white;
+    top:10px;
+    margin: 0;
+    padding: 0 20px;
+    z-index: 0;
+    text-shadow: 0 0 20px green,0 0 20px green;
+    line-height: 0.70em;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+}
+
+.neon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+
+.ADS span
+{
+
+    color: transparent;
+    /*animation: animate_ADS 5s linear infinite;
+    animation-delay: calc(0.5s * var(--i));*/
+}
+@keyframes animate_ADS
+{
+    0%
+    {
+        color: #fff;
+        border-shadow: 0 0 20px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+        0 0 800px #00b3ff,
+        0 0 1200px #00b3ff,
+        0 0 1600px #00b3ff;
+
+    }
+    30%, 70% , 100%
+    {
+        color: #fff;
+
+        border-shadow: 0 0 20px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+        0 0 800px #00b3ff,
+        0 0 1200px #00b3ff,
+        0 0 1600px #00b3ff;
+    }
+    100%, 70%, 30%, 10%, 5%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: drop-shadow(0 0 40px blue);
+    }
+}
+
+img.hinh-kl1{
+    width: 180px;
+    height: 100px;
+    filter: drop-shadow(0 0 7px white);
+
+       /*position: relative;
+    background: #0f0;
+    object-position: 150px 0;
+    object-fit: contain;*/
+    top: 0;
+    padding:0!important;
+    margin:0;
+    left: 85%;
+    object-fit: fill;
+    float: center;
+    color: transparent;
+
+}
+/*######################################################################*/
+.densang {
+    margin: 0px 0;
+    letter-spacing: 2px;
+    color: #0e3742;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+    text-shadow: 0 0 20px #fff;
+}
+
+.densang:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+
+    text-align: center;
+    background: #fe3a80;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+@keyframes animate
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 20px #fff;
+        /*filter: blur(15px);
+        text-shadow: 0 0 20px #03bcf4,*/
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+
+
+    }
+}
+/*##########################################*/
+.slider{
+
+	width: 250px;
+	height: 300px;
+    object-fit: fill;
+	background: url('https://yt3.ggpht.com/-Zc7BeyNOBfgx-UiC4uQLbEI5AdVHMuNYIoKTq4qNa5fCd-QR-KgpM6PhAhranRIgec0S9HTLA=s540-w390-h540-c-k-c0x00ffffff-no-nd-rj');
+	background-size: cover;
+    animation: slide 60s infinite;
+	border-radius: 10px;
+	align-items: center;
+
+}
+
+@keyframes slide{
+
+25%{
+background-image: url('https://cdn.vn.garenanow.com/web/fo4vn/2018-December/bigupdate12-1.png');
+}
+50%{
+
+background: url('https://yt3.ggpht.com/-Zc7BeyNOBfgx-UiC4uQLbEI5AdVHMuNYIoKTq4qNa5fCd-QR-KgpM6PhAhranRIgec0S9HTLA=s540-w390-h540-c-k-c0x00ffffff-no-nd-rj');
+}
+75%{
+
+background: url("https://m.media-amazon.com/images/M/MV5BOTlhMTdiY2YtOTI3My00Y2M5LWI5YWQtYzgyYzgzMzhlMzExXkEyXkFqcGdeQXVyMzM2MzI5MzU@._V1_.jpg')");
+}
+100%{
+
+background: url('https://static.actugaming.net/media/2020/04/Valorant-jaquette.png');
+}
+75%{
+background-image: url('https://cdn.vn.garenanow.com/web/fo4vn/2018-December/bigupdate12-1.png');
+
+}
+50%{
+
+background: url('https://yt3.ggpht.com/-Zc7BeyNOBfgx-UiC4uQLbEI5AdVHMuNYIoKTq4qNa5fCd-QR-KgpM6PhAhranRIgec0S9HTLA=s540-w390-h540-c-k-c0x00ffffff-no-nd-rj');
+}
+25%{
+
+background: url("https://m.media-amazon.com/images/M/MV5BOTlhMTdiY2YtOTI3My00Y2M5LWI5YWQtYzgyYzgzMzhlMzExXkEyXkFqcGdeQXVyMzM2MzI5MzU@._V1_.jpg')");
+}
+0%{
+
+background: url('https://static.actugaming.net/media/2020/04/Valorant-jaquette.png');
+}
+
+
+

@@ -1,0 +1,559 @@
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;
+}
+body {
+
+    top: 0px;
+}
+.stApp {
+    background-color: #212125;
+    top: 0;
+    padding: 0;
+}
+
+
+
+#root > div:nth-child(1) > div.withScreencast > div > div > div > section.css-1k0ckh2.e1fqkh3o9 > div.css-17ziqus.e1fqkh3o3 > div.css-hxt7ib.e1fqkh3o2{
+ color: white;
+ padding-top: 1rem;
+ margin: 0;
+}
+#root > div:nth-child(1) > div.withScreencast > div > div > div > section.css-1k0ckh2.e1fqkh3o9 > div.css-17ziqus.e1fqkh3o3 > div.css-hxt7ib.e1fqkh3o2 > a > i{
+ color: white;
+ padding-top: 1rem;
+
+}
+
+#################################################
+.main{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+    object-fit: cover;
+    background-color:#212125;
+
+    position: relative;
+    top: 0px;
+    left: 0em;
+    padding: 0px 0px 0px 0px;
+
+    margin: 0px;
+    float: left;
+    }
+div.box {
+    position: relative;
+    top: 5px;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    min-height: 150px;
+    margin: 10px 20px 0 0;
+
+    float: left;
+
+}
+.box {
+    position: relative;
+    top: 0px;
+    width: 150px;
+    padding: 0px;
+    perspective: 1000px;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+.box:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 10px 5px solid #000;
+}
+.box .box-img{
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .box-img{
+    transform: rotateY(-90deg);
+
+}
+.box .box-img img{
+    width: 150px;
+    height: 200px;
+    border:1.5px solid #000;
+    border-radius: 5px;
+}
+####################################################
+.box .tengame{
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box .tengame span{
+    position: absolute;
+    color: #fff;
+    background: #A21D0A;
+    font-size: 11px;
+    font-weight: bold;
+
+    float: left;
+    clear: both;
+    padding: 4px;
+    text-shadow: 1px 1px 1px #111;
+    left: 2px;
+    top: 2px;
+    border-top-left-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .tengame span {
+    color: transparent;
+    transform: rotateY(-88deg);
+
+}
+.box .tengame span:after {
+    content: "";
+
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -12px;
+    width: 0;
+    height: 24px;
+    white-space: nowrap;
+
+    border-color: transparent transparent transparent #A21D0A;
+    border-style: solid;
+    border-width: 11px 0 12px 12px;
+
+
+
+}
+####################################################
+.box .tengame_off{
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box .tengame_off span{
+    position: absolute;
+    color: #fff;
+    background: #0000ff;
+    font-size: 11px;
+    font-weight: bold;
+
+    float: left;
+    clear: both;
+    padding: 4px;
+    text-shadow: 1px 1px 2px #111;
+
+    left: 2px;
+    top: 2px;
+    border-top-left-radius: 3px;
+    white-space: nowrap;
+    display: inline-block;
+    -webkit-box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgb(0 0 0 / 75%);
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .tengame_off span {
+    color: transparent;
+    transform: rotateY(-88deg);
+
+}
+.box .tengame_off span:after {
+    content: "";
+
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -12px;
+    width: 0;
+    height: 24px;
+    white-space: nowrap;
+
+    border-color: transparent transparent transparent #0000ff;
+    border-style: solid;
+    border-width: 11px 0 12px 12px;
+
+
+
+}
+/*#########################################################################*/
+/*.box:hover .tengame h3{
+}*/
+.name {
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+    color: #ff8040;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(0,0,0,.7);
+    padding: 5px 0px 10px 5px;
+    margin: 0px 0px 1px 0px;
+    top: 158px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .name {
+    transform: rotateY(-90deg);
+
+}
+
+.theloai {
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-decoration: none;
+    margin: 13px 3px 1px 0px;
+    /*top, phai, bottom, trai*/
+    font-size: 12px;
+    position: absolute;
+    padding: 5px;
+    top: 165px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    transform: rotateY(0deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .theloai {
+    transform: rotateY(-90deg);
+
+}
+.luotchoi {
+
+    /*display: block;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    width: 100%;
+    text-align: right;
+    align-items: right;
+    margin: 13px 0px 0px 0px;
+    bottom: 0;
+    top: 170px;
+    padding: 5px;
+
+    color: rgba(255,255,255,0.5);
+    font-size: 8px;
+    position: absolute;
+
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+
+}
+.box:hover .luotchoi {
+    color: transparent;
+    transform: rotateY(-90deg);
+
+}
+/*##############################################################################*/
+.box .content {
+    color: white;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .content{
+    transform: rotateY(0);
+
+
+}
+.box .content h3{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+
+}
+.box .content p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 0px 0px;
+    margin: 0 25px;
+}
+/*#######################################################################*/
+.box .button{
+    top: 120px;
+    left: 0;
+    width: 100%;
+
+    position: absolute;
+
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+
+
+
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+.box:hover .button{
+    transform: rotateY(0deg);
+
+}
+.box .button li{
+    list-style: none;
+    padding: 5px 0;
+}
+.box .button li button{
+    color: #15f4ee;
+    font-size: 15px;
+    text-decoration: none;
+    border:1px solid #15f4ee;
+    padding: 0px 3px;
+    background:#000;
+    border-radius: 6px;
+    cursor: pointer;
+
+
+}
+.box .button li button:hover{
+    box-shadow: 0 1px 15px 0 #15f4ee inset, 0 1px 15px 0 #15f4ee,
+                0 1px 15px 0 #15f4ee inset, 0 1px 15px 0 #15f4ee;
+    text-shadow: 0 1px 15px 0 #15f4ee, 0 1px 15px 0 #15f4ee;
+
+}
+.box .button li button:focus {
+     outline:none;
+  box-shadow: none;
+}
+
+/*############################ ADS ########################################*/
+
+div.header-logo {
+    width: 100%;
+    position: relative;
+}
+div.header-logo .hinh{
+    width: 99%;
+    height: 250px;
+    filter: drop-shadow(0 0 20px blue);
+       /*position: relative;
+    object-position: 150px 0;
+    object-fit: contain;*/
+}
+img.hinh-kl{
+    position: fixed;
+    width: 19%;
+    height: 20%;
+    filter: drop-shadow(0 0 20px white);
+
+       /*position: relative;
+    background: #0f0;
+    object-position: 150px 0;
+    object-fit: contain;*/
+    top: 0;
+    left: 85%;
+    object-fit: fill;
+    float: right;
+    color: transparent;
+    animation: animate_ADS 5s linear infinite;
+    /*animation-delay: calc(0.1s * var(--i));*/
+
+}
+
+div.header-logo h2 {
+    position: absolute;
+    display: flex;
+    float: right;
+    font-family:'Times New Roman', cursive;
+    font-size: 3vw;
+    right: 120px;
+
+    top:0;
+    margin: 0;
+    padding: 0;
+
+
+}
+.ADS span
+{
+    color: transparent;
+    /*animation: animate_ADS 5s linear infinite;
+    animation-delay: calc(0.5s * var(--i));*/
+}
+@keyframes animate_ADS
+{
+    0%
+    {
+        color: #fff;
+        border-shadow: 0 0 20px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+        0 0 800px #00b3ff,
+        0 0 1200px #00b3ff,
+        0 0 1600px #00b3ff;
+
+    }
+    30%, 70% , 100%
+    {
+        color: #fff;
+
+        border-shadow: 0 0 20px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+        0 0 800px #00b3ff,
+        0 0 1200px #00b3ff,
+        0 0 1600px #00b3ff;
+    }
+    100%, 70%, 30%, 10%, 5%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: drop-shadow(0 0 40px blue);
+    }
+}
+
+
+
+/*######################################################################*/
+.densang {
+    margin: 0px 0;
+    letter-spacing: 2px;
+    color: #0e3742;
+    width: 100%;
+
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+
+
+    text-shadow: 0 0 20px #fff;
+}
+
+.densang:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+
+    text-align: center;
+    background: #fe3a80;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+@keyframes animate
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 20px #fff;
+        /*filter: blur(15px);
+        text-shadow: 0 0 20px #03bcf4,*/
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+
+
+    }
+}
+/*##########################################*/
+.slider{
+    display: block;
+	width: 250px;
+	height: 300px;
+
+    align-items: center;
+	background: url('http://vnphimmoi.net/wp-content/uploads/2021/12/ma-tran-hoi-sinh-58788-thumbnail.jpg')
+	margin: 100px auto;
+	animation: slide 30s infinite;
+	border-radius: 10px;
+
+}
+@keyframes slide{
+0%{
+background: url('https://vnphimmoi.net/wp-content/uploads/2021/12/nguoi-nhen-khong-con-nha-58642-thumbnail-250x350.jpg');
+}
+25%{
+background: url('https://vnphimmoi.net/wp-content/uploads/2021/12/nguoi-nhen-khong-con-nha-58642-thumbnail-250x350.jpg');
+}
+50%{
+background: url('http://vnphimmoi.net/wp-content/uploads/2021/12/ma-tran-hoi-sinh-58788-thumbnail.jpg');
+}
+75%{
+background: url("https://vnphimmoi.net/wp-content/uploads/2021/09/shang-chi-va-huyen-thoai-thap-nhan-51239-thumbnail.jpg')");
+}
+100%{
+background: url('http://vnphimmoi.net/wp-content/uploads/2021/12/ma-tran-hoi-sinh-58788-thumbnail.jpg');
+}
+}
+
+
+

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> -->
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'> -->
+	
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+	<link rel="stylesheet" href="/assets/css/all.min.css">
+
+	
+	
+	<link rel="stylesheet" href="/assets/css/style_main.css">
+   
+	<link rel="stylesheet" type="text/css" href="/assets/guru_theme/assets/icon/themify-icons/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="/assets/guru_theme/assets/pages/notification/notification.css">
+	
+
+	<!-- <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script> -->
+	<!-- <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script> -->
+
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+	
+
+	
+    <link rel="stylesheet" type="text/css" href="/assets/guru_theme/assets/css/animate.css/css/animate.css">
+
+	<!-- scroll date -->
+	<!-- <link href="/assets/scrolldate/css/mobiscroll.css" rel="stylesheet" /> -->
+	<link href="/assets/scrolldate/css/mobiscroll_date.css" rel="stylesheet" />
+	
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+	<link rel="stylesheet" href="/assets/css/flatpickr.min.css">
+	<script src="/assets/js/flatpickr.js"></script>
+
+    <title>Manager-Order</title>
+</head>
+<body class="dark">
+	
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+
+		<!-- <a id = "text"></a> -->
+		<div class='infousers' style="background-color: var(--background);">
+			<img src="/templates/images_order/logo.png">
+		</div>
+		<div class='infousers' style="float: center; text-align: left; padding-left: 20px;margin-top: 10px;">
+			
+			<li style="position: relative;margin-bottom: 20px;">
+				<div class="" id="user_photo" style="top:0; position: absolute; width: 36px; margin: 0px; padding: 0;"></div>
+				<a href="#" class="branda" style="margin-left: 45px;font-size: 20px; font-weight: 500; color: var(--dark);">username</a>
+			</li>
+			<li><a href="#" class="branda">PM: <b style="color: var(--dark);">Cyber Thiên Thần</b></a></li>
+			<li><a href="#" class="HSD">HSD: <b style="color: var(--dark);">23:00:00 13/06/2023</b></a></li>
+		</div>
+		<ul class="side-menu">
+			<li><a href="#" onclick="switch_tab(this)"><i class="ti-shine icon"></i>Xin Chào !</a></li>
+
+			<li class="divider manager" data-text="CƠ BẢN">CƠ BẢN
+                <li><a href="#" onclick="switch_tab(this,'CƠ BẢN')"><i class="ti-desktop icon"></i>Máy Trạm</a></li>
+				<li><a href="#" onclick="switch_tab(this,'CƠ BẢN')"><i class="ti-more-alt icon"></i>Bi-a</a></li>
+				<li><a href="#" onclick="switch_tab(this,'CƠ BẢN')"><i class="ti-shopping-cart-full icon"></i>Đơn Hàng</a></li>
+                
+            </li>
+			
+			<li class="divider manager" data-text="NÂNG CAO">NÂNG CAO
+				<li><a href="#" onclick="switch_tab(this,'CƠ BẢN')"><i class="ti-bar-chart icon"></i>Thống Kê</a></li>
+				<li><a href="#" onclick="switch_tab(this, 'Thiết lập')"><i class="ti-clipboard icon"></i>Báo Cáo</a></li>
+			</li>
+
+            <li class="divider manager" data-text="THIẾT LẬP">THIẾT LẬP
+				<li><a href="#" onclick="switch_tab(this, 'Thiết lập')"><i class="ti-settings icon"></i>Cơ Bản</a></li>
+				<li><a href="#" onclick="switch_tab(this, 'Thiết lập')"><i class="ti-printer icon"></i>Máy In</a></li>
+				<li><a href="#" onclick="switch_tab(this, 'Thiết lập')"><i class="ti-user icon"></i>Nhân Viên</a></li>
+			
+				<li>
+					<a href="#"><i class="ti-home icon"></i> Hàng Bán <i class='ti-angle-right icon-right' ></i></a>
+					<ul class="side-dropdown">
+						<li><a href="#" onclick="switch_tab(this, 'Thiết lập')">Danh Mục</a></li>
+						<li><a href="#" onclick="switch_tab(this, 'Thiết lập')">Mặt Hàng</a></li>
+						<li><a href="#" onclick="switch_tab(this, 'Thiết lập')">Nguyên Liệu</a></li>
+						<li><a href="#" onclick="switch_tab(this, 'Thiết lập')">Nhóm Mặt Hàng</a></li>
+					</ul>
+				</li>
+			
+
+				<li><a href="#" onclick="switch_tab(this, 'CƠ BẢN')"><i class="ti-gift icon"></i>Khuyến Mại</a></li>
+				<li>
+					<a href="#"><i class="ti-layout-grid3 icon"></i> KLMenu <i class='ti-angle-right icon-right' ></i></a>
+					<ul class="side-dropdown">
+						<li><a href="#" onclick="switch_tab(this, 'CƠ BẢN')">Menu Dịch Vụ</a></li>
+						<li><a href="#" onclick="switch_tab(this, 'CƠ BẢN')">Menu Game</a></li>
+						<li><a href="#" onclick="switch_tab(this, 'CƠ BẢN')">Bảng Tin</a></li>
+						<li><a href="#" onclick="switch_tab(this, 'CƠ BẢN')">Tùy chỉnh</a></li>
+					</ul>
+				</li>
+			</li>
+		</ul>
+	
+	</section>
+
+    <!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR Bên phải toggle-sidebar-->
+		<nav>
+			<!-- <i class='bx bx-menu toggle-sidebar' style="font-size: 25px;"></i> -->
+			<i class="ti-shift-left toggle-sidebar"></i>
+			<form action="#">
+				<div class="form-group">
+					<input class='table-search' data-table-search="myTable" type="text" placeholder="Search...">
+					<i class='bx bx-search icon'></i>
+				</div>
+
+				<div class='menu-sort'> 
+					<div class="btn-nav DH" style="margin-right: 0px;">
+						<div class="btn-nav-menu DH"><i class="ti-shopping-cart"></i>Đơn Hàng</div>
+					</div>
+	
+					<div class="btn-nav MH" style="margin-right: 0px;">
+						<div class="btn-nav-menu "><i class="ti-bag"></i>Mặt Hàng</div>
+					</div>
+	
+					<div class="btn-nav DM" style="margin-right: 0px;">
+						<div class="btn-nav-menu "><i class="ti-layout-list-post"></i>Danh Mục</div>
+					</div>
+	
+					<div class="btn-nav BT" style="margin-right: 0px;">
+						<div class="btn-nav-menu "><i class="ti-layout"></i>Bảng Tin</div>
+					</div>
+	
+					<div class="btn-nav TB" style="margin-right: 0px;">
+						<div class="btn-nav-menu "><i class="ti-announcement"></i>Thông Báo</div>
+					</div>
+				</div>
+			</form>
+
+			<input type="checkbox" id="mode" checked hidden="">
+			<label for="mode"></label>
+			<a href="#" class="nav-link">
+				<i class="ti-bell icon"></i>
+				<span class="badge">0</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class="ti-comment-alt icon"></i>
+				<span class="badge">0</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<div class="photousername" id="photousername"> </div>
+				<!-- <img class="photousername" id="photousername"> -->
+				<ul class="profile-link">
+					<li><a href="#" onclick="Profile()"><i class="ti-user icon" style="margin-right: 10px;"></i>Profile</a></li>
+					<li><a href="#"><i class="ti-settings icon" style="margin-right: 10px;"></i>Settings</a></li>
+					<li><a href="#" onclick="fbLogout()"><i class="ti-back-left icon" style="margin-right: 10px;"> </i>Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- MAIN -->
+		<main Class='MenuMain'>
+			<div style="position: relative;">
+				<h1 class="title">Xin Chào !</h1>
+				<ul class="breadcrumbs" style="padding-bottom: 10px; color: var(--dark);">
+					<li>Home</li>
+					<li>/</li>
+					<li><a href="#" class="active">Xin Chào !</a></li>
+				</ul>
+				<!-- style="position: -webkit-sticky; position: sticky; right: 0;" -->
+				<div class="show_btn_back">
+					<!-- show btn back -->
+				</div>
+			</div>
+			<div id='main'>
+				<!-- show content page -->
+			</div>
+        </main>
+    </section>
+
+	
+
+	<!----------------------- element thong bao ------------------->
+	<div class="dashboard-thongbao">
+		<h3>Thông Báo <span class="countcart"></span></h3>
+		<hr class="divider">
+		<div class="thongbao-wrapper">
+			<div class="thongbao-card">
+				<!-- <p>[Hệ Thống] Đặt hàng <b style='color: #00b627;'> thành công!</b></p>
+				<p style="color: var(--black2); font-size: 13px;">12:05:12, 12/02/2022</p>
+				<hr class="divider"> -->
+			</div>
+		</div>
+		<hr class="divider" style="position: absolute;bottom: 0px;">
+	</div>
+	<!-------------- element loading popup ------------------------->
+	<div class="overlay"></div>
+	<div class="poup">
+		<p class="poup_thongbao">[Hệ Thống] Đặt hàng Mì xào rau, Mì xào Rau + Trứng ốp la thành công!</p>
+		<div class="progress-bar" style= "--width: 100" data-label=""></div>
+	</div>
+	<!------------------ element popup input ------------------>
+	<div class="containerpopup">
+		<div class="popup" id="popup" tabindex="-1" role="dialog" aria-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
+			<!-- change content popup -->
+		</div>
+	</div> 
+	<!----------------- popup conform ------------->
+	<!-- class="not_show" -->
+	<div class="backdrop">
+		<div id="id_confrmdiv" >
+			<div>
+				<label>Xác Nhận</label>
+			</div>
+			
+			<div class="shownoidung_popup">	
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam magni voluptatibus dicta nam quisquam in? Distinctio velit, consectetur est quibusdam nisi id quo explicabo expedita neque odit, maiores ex.</p>
+				<div class="question">afsf ?</div>
+			</div>
+
+			<div class="btn_confirm" style="float: right; margin:10px 0;">
+				<button id="id_falsebtn">HUỶ</button>
+				<button id="id_truebtn">XÁC NHẬN</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pre-loader start -->
+	<!-- <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+	
+	<!-- js-cookie -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script> -->
+	<script src="/assets/js/js.cookie.min.js"></script>
+	
+    <!-- Script chính -->
+	<script src="/assets/js/emoji.min.js"></script>
+	<!-- <script src="assets/js/apexcharts.js"></script> -->
+	<!-- <script src="assets/js/axios.min.js"></script> -->
+
+    <!--check element resize-->
+	<script src="/assets/js/ResizeSensor.js"></script>
+    <script src="/assets/js/axios.min.js"></script>
+
+	<!-- chart js -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
+	<script src="assets/js/apexcharts"></script>
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.2/highcharts.js" integrity="sha512-JVzXlL1mZb/G0YNUJtPqUzA/QtPMQLNpCtEBOV9R8P3Uskp4W0C+6SVZ3rpwnKcp/V/59YQoGNUYmB/N6do1sA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+	<script src="assets/js/highcharts.js" integrity="sha512-JVzXlL1mZb/G0YNUJtPqUzA/QtPMQLNpCtEBOV9R8P3Uskp4W0C+6SVZ3rpwnKcp/V/59YQoGNUYmB/N6do1sA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/js/accessibility.js"></script>
+	<script src="assets/js/popper/popper.min.js"></script>
+	
+
+	<!-- <script src="https://code.highcharts.com/stock/highstock.js"></script> -->
+	<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+	<!-- <script src='https://code.highcharts.local/highcharts.src.js'></script> -->
+
+	<!-- js drag drog element -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.1/Sortable.min.js"></script> -->
+	<script src="assets/js/Sortable.min.js"></script>	
+	
+    <!-- <script type="text/javascript" src="assets/js/Dashboard/script.js"></script> -->
+	<!-- <script type="text/javascript" src="assets/js/jquery.tablesorter.collapsible.js"></script> -->
+	<!-- <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script> -->
+	<!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script> -->
+	
+	<!-- <script src="http://127.0.0.1:8100/assets/scrolldate/mobiscroll.js"></script> -->
+	<!-- <script src="http://127.0.0.1:8100/assets/scrolldate/mobiscroll_date.js"></script> -->
+
+	<!-- Required Jquery -->
+	
+	<script type="text/javascript" src="assets/js/jquery/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="/assets/js/jquery-ui/jquery-ui.min.js"></script> -->
+
+	<script type="text/javascript" src="assets/js/popper/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap/js/bootstrap.min.js"></script>
+	<!-- notification js -->
+	<script type="text/javascript" src="assets/js/bootstrap-growl.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/Notifier.js"></script>
+	
+	<script type="text/javascript" src="assets/js/manager-order.js"></script>
+
+
+	<!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script> -->
+	<script src='/assets/js/jquery.min.js'></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>dùng sort to array element -->
+	<script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script><!-- dùng sort to array element-->
+
+	<script src="assets/scrolldate/mobiscroll_date.js"></script>
+   	<script src="/assets/scrolldate/mobiscroll.js"></script>
+
+	<script lang="javascript" src="/assets/dist/xlsx.full.min.js"></script>	
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.1/xlsx.full.min.js"></script>  -->
+
+	<!-- avatar user  -->
+	<script src="/assets/js/multiavatar.js?v=01"></script>
+
+	<script>
+		/*
+		CryptoJS v3.1.2
+		code.google.com/p/crypto-js
+		(c) 2009-2013 by Jeff Mott. All rights reserved.
+		code.google.com/p/crypto-js/wiki/License
+		*/
+		var CryptoJS=CryptoJS||function(h,s){var f={},t=f.lib={},g=function(){},j=t.Base={extend:function(a){g.prototype=this;var c=new g;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},
+		q=t.WordArray=j.extend({init:function(a,c){a=this.words=a||[];this.sigBytes=c!=s?c:4*a.length},toString:function(a){return(a||u).stringify(this)},concat:function(a){var c=this.words,d=a.words,b=this.sigBytes;a=a.sigBytes;this.clamp();if(b%4)for(var e=0;e<a;e++)c[b+e>>>2]|=(d[e>>>2]>>>24-8*(e%4)&255)<<24-8*((b+e)%4);else if(65535<d.length)for(e=0;e<a;e+=4)c[b+e>>>2]=d[e>>>2];else c.push.apply(c,d);this.sigBytes+=a;return this},clamp:function(){var a=this.words,c=this.sigBytes;a[c>>>2]&=4294967295<<
+		32-8*(c%4);a.length=h.ceil(c/4)},clone:function(){var a=j.clone.call(this);a.words=this.words.slice(0);return a},random:function(a){for(var c=[],d=0;d<a;d+=4)c.push(4294967296*h.random()|0);return new q.init(c,a)}}),v=f.enc={},u=v.Hex={stringify:function(a){var c=a.words;a=a.sigBytes;for(var d=[],b=0;b<a;b++){var e=c[b>>>2]>>>24-8*(b%4)&255;d.push((e>>>4).toString(16));d.push((e&15).toString(16))}return d.join("")},parse:function(a){for(var c=a.length,d=[],b=0;b<c;b+=2)d[b>>>3]|=parseInt(a.substr(b,
+		2),16)<<24-4*(b%8);return new q.init(d,c/2)}},k=v.Latin1={stringify:function(a){var c=a.words;a=a.sigBytes;for(var d=[],b=0;b<a;b++)d.push(String.fromCharCode(c[b>>>2]>>>24-8*(b%4)&255));return d.join("")},parse:function(a){for(var c=a.length,d=[],b=0;b<c;b++)d[b>>>2]|=(a.charCodeAt(b)&255)<<24-8*(b%4);return new q.init(d,c)}},l=v.Utf8={stringify:function(a){try{return decodeURIComponent(escape(k.stringify(a)))}catch(c){throw Error("Malformed UTF-8 data");}},parse:function(a){return k.parse(unescape(encodeURIComponent(a)))}},
+		x=t.BufferedBlockAlgorithm=j.extend({reset:function(){this._data=new q.init;this._nDataBytes=0},_append:function(a){"string"==typeof a&&(a=l.parse(a));this._data.concat(a);this._nDataBytes+=a.sigBytes},_process:function(a){var c=this._data,d=c.words,b=c.sigBytes,e=this.blockSize,f=b/(4*e),f=a?h.ceil(f):h.max((f|0)-this._minBufferSize,0);a=f*e;b=h.min(4*a,b);if(a){for(var m=0;m<a;m+=e)this._doProcessBlock(d,m);m=d.splice(0,a);c.sigBytes-=b}return new q.init(m,b)},clone:function(){var a=j.clone.call(this);
+		a._data=this._data.clone();return a},_minBufferSize:0});t.Hasher=x.extend({cfg:j.extend(),init:function(a){this.cfg=this.cfg.extend(a);this.reset()},reset:function(){x.reset.call(this);this._doReset()},update:function(a){this._append(a);this._process();return this},finalize:function(a){a&&this._append(a);return this._doFinalize()},blockSize:16,_createHelper:function(a){return function(c,d){return(new a.init(d)).finalize(c)}},_createHmacHelper:function(a){return function(c,d){return(new w.HMAC.init(a,
+		d)).finalize(c)}}});var w=f.algo={};return f}(Math);
+		(function(h){for(var s=CryptoJS,f=s.lib,t=f.WordArray,g=f.Hasher,f=s.algo,j=[],q=[],v=function(a){return 4294967296*(a-(a|0))|0},u=2,k=0;64>k;){var l;a:{l=u;for(var x=h.sqrt(l),w=2;w<=x;w++)if(!(l%w)){l=!1;break a}l=!0}l&&(8>k&&(j[k]=v(h.pow(u,0.5))),q[k]=v(h.pow(u,1/3)),k++);u++}var a=[],f=f.SHA256=g.extend({_doReset:function(){this._hash=new t.init(j.slice(0))},_doProcessBlock:function(c,d){for(var b=this._hash.words,e=b[0],f=b[1],m=b[2],h=b[3],p=b[4],j=b[5],k=b[6],l=b[7],n=0;64>n;n++){if(16>n)a[n]=
+		c[d+n]|0;else{var r=a[n-15],g=a[n-2];a[n]=((r<<25|r>>>7)^(r<<14|r>>>18)^r>>>3)+a[n-7]+((g<<15|g>>>17)^(g<<13|g>>>19)^g>>>10)+a[n-16]}r=l+((p<<26|p>>>6)^(p<<21|p>>>11)^(p<<7|p>>>25))+(p&j^~p&k)+q[n]+a[n];g=((e<<30|e>>>2)^(e<<19|e>>>13)^(e<<10|e>>>22))+(e&f^e&m^f&m);l=k;k=j;j=p;p=h+r|0;h=m;m=f;f=e;e=r+g|0}b[0]=b[0]+e|0;b[1]=b[1]+f|0;b[2]=b[2]+m|0;b[3]=b[3]+h|0;b[4]=b[4]+p|0;b[5]=b[5]+j|0;b[6]=b[6]+k|0;b[7]=b[7]+l|0},_doFinalize:function(){var a=this._data,d=a.words,b=8*this._nDataBytes,e=8*a.sigBytes;
+		d[e>>>5]|=128<<24-e%32;d[(e+64>>>9<<4)+14]=h.floor(b/4294967296);d[(e+64>>>9<<4)+15]=b;a.sigBytes=4*d.length;this._process();return this._hash},clone:function(){var a=g.clone.call(this);a._hash=this._hash.clone();return a}});s.SHA256=g._createHelper(f);s.HmacSHA256=g._createHmacHelper(f)})(Math);
+	</script>
+	
+</body>
+</html>
