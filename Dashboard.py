@@ -57,7 +57,7 @@ import numpy as np
 import pygetwindow as gw
 
 import keyboard
-###################### thu vien google #############################test
+###################### thu vien google #############################ss
 import logging
 import os
 import os.path
